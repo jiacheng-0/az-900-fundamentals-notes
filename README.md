@@ -104,7 +104,8 @@ storage is not limited ✅
 
 - describe the benefits and usage of Regions and Region Pairs 
 
-- describe the benefits and usage of Availability Zones 
+- describe the benefits and usage of **Availability Zones** 
+  - Data Centers
 
 - describe the benefits and usage of Resource Groups 
 
@@ -112,7 +113,17 @@ storage is not limited ✅
 
 - describe the benefits and usage of Management Groups 
 
+![Organize your resources with management groups - Azure Governance - Azure  governance | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/management-groups/media/tree.png)
+
+![Azure Resource Manager overview - Azure Resource Manager | Microsoft Docs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/media/overview/scope-levels.png)
+
+
+
 - describe the benefits and usage of Azure Resource Manager 
+
+![Resource Manager request model](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/media/overview/consistent-management-layer.png)
+
+
 
 - explain Azure resources 
 
@@ -152,12 +163,18 @@ describe the benefits and usage of Internet of Things (IoT) Hub, IoT Central, an
 
  describe the functionality and usage of Azure Monitor
 
+![Overview of Azure Monitor, Security Center & Sentinel](https://www.systemcenterautomation.com/wp-content/uploads/2020/03/2020-03-18_18-14-13-1024x650.png)
+
+**Service health** can see health of Azure services
+
 
 
 Azure Monitor
 
 - can see multiple subscriptions 
-- ...
+- Application Insights
+  - ![Application Insights instrumentation in your app sends telemetry to your Application Insights resource.](https://docs.microsoft.com/en-us/azure/azure-monitor/app/media/app-insights-overview/diagram.png)
+  - 
 - ...
 
 
@@ -188,7 +205,57 @@ Azure Monitor
 
 ## Describe core Azure identity services 
 
- explain the difference between authentication and authorization  define Azure Active Directory  describe the functionality and usage of Azure Active Directory  describe the functionality and usage of Conditional Access, Multi-Factor Authentication (MFA), and Single Sign-On (SSO) Describe Azure governance features  describe the functionality and usage of Role-Based Access Control (RBAC)  describe the functionality and usage of resource locks  describe the functionality and usage of tags  describe the functionality and usage of Azure Policy  describe the functionality and usage of Azure Blueprints  describe the Cloud Adoption Framework for Azure Describe privacy and compliance resources  describe the Microsoft core tenets of Security, Privacy, and Compliance  describe the purpose of the Microsoft Privacy Statement, Product Terms site, and Data Protection Addendum (DPA)  describe the purpose of the Trust Center  describe the purpose of the Azure compliance documentation  describe the purpose of Azure Sovereign Regions (Azure Government cloud services and Azure China cloud services) 
+ explain the difference between authentication and authorization 
+
+
+
+ define Azure Active Directory 
+
+![Classic subscription administrator roles, Azure roles, and Azure AD roles |  Microsoft Docs](https://docs.microsoft.com/en-us/azure/role-based-access-control/media/rbac-and-directory-admin-roles/rbac-admin-roles.png)
+
+- each subscription can contain **multiple** account administrators 
+- one resource group is tied to **one and only one** subscription
+- each subscription can be managed by **multiple** Microsoft account only
+
+
+
+ describe the functionality and usage of Azure Active Directory 
+
+ describe the functionality and usage of Conditional Access, Multi-Factor Authentication (MFA), and Single Sign-On (SSO) Describe Azure governance features 
+
+ describe the functionality and usage of Role-Based Access Control (RBAC) 
+
+
+
+ describe the functionality and usage of resource locks 
+
+**a resource** can have **multiple** locks of the same type (READ-only, DELETE)
+
+you are able to create **READ + DELETE** locks on the same resource
+
+**inherit locks** from parent resource groups
+
+
+
+ describe the functionality and usage of tags 
+
+ describe the functionality and usage of Azure Policy 
+
+ describe the functionality and usage of Azure Blueprints 
+
+ describe the Cloud Adoption Framework for Azure Describe privacy and compliance resources 
+
+ describe the Microsoft core tenets of Security, Privacy, and Compliance 
+
+ describe the purpose of the Microsoft Privacy Statement, Product Terms site, and Data Protection Addendum (DPA) 
+
+ describe the purpose of the Trust Center 
+
+Compliance
+
+ describe the purpose of the Azure compliance documentation 
+
+ describe the purpose of Azure Sovereign Regions (Azure Government cloud services and Azure China cloud services) 
 
 # Describe Azure cost management and Service Level Agreements (10- 15%) 
 

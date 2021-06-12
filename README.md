@@ -1,6 +1,40 @@
 # AZ-900-fundamentals-notes
 Microsoft azure
 
+## Change Log / Progress Track
+
+### 2021-06-13
+
+https://marczak.io/az-900/episode-09/practice-test/
+
+| Topics | Done? ✅ |
+| ------ | ------- |
+| 1-11   | ✅       |
+|        |         |
+|        |         |
+
+10 questions on exam topics a day
+
+| Questions | Done? ✅ |
+| --------- | ------- |
+| 1-10      |         |
+|           |         |
+|           |         |
+|           |         |
+
+
+
+| Mon  | Tue  | Wed  | Thu  | Fri  | Sat  | Sun  |
+| :--- | ---- | ---- | ---- | ---- | ---- | ---- |
+|      |      |      |      |      |      | 13   |
+|      |      |      |      |      |      | 20   |
+|      |      |      | 24   |      |      |      |
+|      |      |      |      |      |      |      |
+|      |      |      |      |      |      |      |
+|      |      |      |      |      |      |      |
+
+
+
 # Describe Cloud Concepts (20-25%) 
 
 ## Identify the benefits and considerations of using cloud services 
@@ -44,6 +78,7 @@ fault tolerance
   - only IaaS provides this
 - can scale platform automatically ✅ 
 - has **pre-coded** application components built into the platform :white_check_mark:
+- 
 
 
 
@@ -103,14 +138,22 @@ storage is not limited ✅
 ## Describe the core Azure architectural components 
 
 - describe the benefits and usage of Regions and Region Pairs 
-
 - describe the benefits and usage of **Availability Zones** 
   - Data Centers
-
 - describe the benefits and usage of Resource Groups 
+  - Resource Groups can represent logic grouping of *services*
+    - by their life cycle
+    - for billing and tracking purposes
+    - by their resource type
+    - by assigned departments
+    - geographical location
+  - It is not recommended for resource groups to be nested
+    - In fact, "there is no structure for a “nested” resource group in Azure
+    - https://blog.turbonomic.com/microsoft-azure-resource-groups-introduction-best-practices
+    - It is recommended to use Resource Groups, Subscriptions, and Management Groups
+  - A resource group can contain resources from different regions
 
--  describe the benefits and usage of Subscriptions 
-
+- describe the benefits and usage of Subscriptions 
 - describe the benefits and usage of Management Groups 
 
 ![Organize your resources with management groups - Azure Governance - Azure  governance | Microsoft Docs](https://docs.microsoft.com/en-us/azure/governance/management-groups/media/tree.png)
@@ -120,6 +163,8 @@ storage is not limited ✅
 
 
 - describe the benefits and usage of Azure Resource Manager 
+  - ARM is a Central Management Layer for managing all Azure resources
+  - It uses JSON
 
 ![Resource Manager request model](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/media/overview/consistent-management-layer.png)
 
@@ -131,9 +176,30 @@ storage is not limited ✅
 
  describe the benefits and usage of Virtual Machines, Azure App Services, Azure Container Instances (ACI), Azure Kubernetes Service (AKS), and Windows Virtual Desktop 
 
+- AKS customizable and container orchestration platform
+
  describe the benefits and usage of Virtual Networks, VPN Gateway, Virtual Network peering, and ExpressRoute 
 
+- VPN Gateway
+  - connect on-premise networks to Azure Virtual network via public internet
+
  describe the benefits and usage of Container (Blob) Storage, Disk Storage, File Storage, and storage tiers 
+
+<u>Blob storage</u> 
+
+- General purpose file structure in Azure
+
+Types of storage:
+
+- Blob
+- Disk
+  - Can mount drives on their PM
+- File
+- Queue
+  - storing large number of messages
+- Table
+
+
 
  describe the benefits and usage of Cosmos DB, Azure SQL Database, Azure Database for MySQL, Azure Database for PostgreSQL, and SQL Managed Instance 
 
@@ -277,13 +343,11 @@ Compliance
 
 ![The trophy for the Describe core Azure concepts learning path.](https://docs.microsoft.com/en-us/learn/achievements/az-900-describe-cloud-concepts.svg)
 
-# Part 1: Azure concepts
+# [Part 1: Describe core Azure concepts](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-cloud-concepts/)
 
 ![Diagram showing overall view of popular Azure services with sections for security and management, platform services, hybrid cloud, and infrastructure services.](https://docs.microsoft.com/en-us/learn/azure-fundamentals/intro-to-azure-fundamentals/media/azure-services-6c41a736.png)
 
 ## Cloud Models
-
-- 
 
 ![The trophy for the Describe core Azure services learning path.](https://docs.microsoft.com/en-us/learn/achievements/az-900-describe-core-azure-services.svg)
 
@@ -293,11 +357,27 @@ OpEx - operation expenditure
 
 
 
+## Networking Services
 
+Distribution:
+
+- non-HTTP web traffic > Azure Load balancer 
+
+- HTTP traffic > Azure Application Gateway
+
+CDN 
+
+- Caching and global distribution of web application content to minimize latency of delivery to customers
+
+Subnets
+
+- cannot be nested
 
 # [Part 2: Azure services](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-core-azure-services/)
 
 ![The trophy for the Describe core solutions and management tools on Azure learning path.](https://docs.microsoft.com/en-us/learn/achievements/azure-fundamentals-describe-core-solutions-and-management-tools-on-azure.svg)
+
+![Decision tree for Azure compute services](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/images/compute-choices.png)
 
 # [Part 3: solutions and management tools on Azure](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-core-solutions-management-tools-azure/)
 

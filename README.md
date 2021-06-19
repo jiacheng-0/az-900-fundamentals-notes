@@ -5,23 +5,21 @@
 
 ## Change Log / Progress Track
 
-### 2021-06-13
+### Marczak.io
 
 https://marczak.io/az-900/episode-09/practice-test/
 
-| Topics | Done? |
-| ------ | ----- |
-| 1-13   | ✅     |
-|        |       |
-|        |       |
+| Topics | Done? | ---------------------------------------------------- |
+| ------ | ----- | ---------------------------------------------------- |
+| 1-16   | ✅     |                                                      |
+|        |       |                                                      |
+|        |       |                                                      |
 
 10 questions on exam topics a day
 
 | Questions | Done? ✅ |
 | --------- | ------- |
 | 1-10      |         |
-|           |         |
-|           |         |
 |           |         |
 
 
@@ -90,6 +88,7 @@ Types of service in Azure that are PaaS
   - Web App
   - Mobile App
   - Logic App
+    - 
 - Functions
 - Web Jobs
 - Azure SQL databases
@@ -245,6 +244,12 @@ Types of storage:
   - SaaS solution for building IoT applications using industry specific templates.
 - Azure sphere 
   - platform with good security features for IoT devices
+- IoT Hub
+  - Service that is used by developers to provide **bi-directional** communication capabilities between devices in the cloud
+
+
+
+- Event Hub
 
 
 
@@ -254,22 +259,21 @@ Types of storage:
   - Big data analytics platform with a unified workspace experience
     - supporting e2e data transformation with the power of SQL and Spark
     - "Big Data" 
-      - is usually described by Velocity, Volume and Variety.
+      - is usually described by **Velocity**, **Volume** and **Variety**.
 
 - HDInsight
-  - Support Hadoop, Spark, HBase
+  - Supports a few cluster types - can cover majority of their requirements
+    - Hadoop, 
+    - Spark, 
+    - HBase
   - Flexible big data and analytics platform supporting multiple open-source analytics technologies
-
-
+  - 
 
 
 
 - Azure Databricks 
-  - based on Apache Spark
-
-
-
-
+  - PaaS offering - helps build data transformation solutions
+  - based on **Apache Spark**
 
 
 
@@ -278,28 +282,49 @@ Types of storage:
 
 
 - Artificial intelligence 
-  - focusing on simulation of human intelligence by computer software 
+  - focusing on **simulation** of human intelligence by computer software 
 
 
 
-- Machine learning is a subset of Artificial intelligence
+- Machine learning 
+  - is a subset of Artificial intelligence
+  - is where data scientist teach computer software to draw conclusions from customer data
 
 
 
 - Azure Machine Learning
   - cloud based e2e machine learning modelling 
-  - Workspace
+  - **Workspace**
     - Top-level Azure resource for management of Azure ML service
-  - Studio
-    - 
-
-
+    - consolidates all the features of Azure Machine learning from a management perspective
+  - **Studio**
+    - GUI-based IDE for constructing and operationalizing Machine Learning workflow on Azure
+  - **Designer**
+    - Drag-and-drop interface used to train and deploy models in Azure Machine Learning
+- 
 
 
 
 
 
  describe the benefits and usage of serverless computing solutions that include Azure Functions and Logic Apps 
+
+Azure Functions
+
+- Azure Event Grid
+- ![Event Grid model of sources and handlers](https://docs.microsoft.com/en-us/azure/event-grid/media/overview/functional-model.png)
+- Helps to route message between services
+- Is a Scalable serverless cloud-based event routing service, which allows applications to publish and **subscribe** to events.
+  - allows customer to subscribe to built-in events coming from Azure subscription and resources.
+
+
+
+### Logic Apps
+
+- Serverless workflow engine service
+- Create application workflows using the visual designer with no code
+
+
 
  describe the benefits and usage of Azure DevOps, GitHub, GitHub Actions, and Azure DevTest Labs 
 

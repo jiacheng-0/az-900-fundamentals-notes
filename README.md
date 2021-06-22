@@ -328,6 +328,20 @@ Azure Functions
 
  describe the benefits and usage of Azure DevOps, GitHub, GitHub Actions, and Azure DevTest Labs 
 
+
+
+DevOps
+
+- Boards, Repo, Pipelines
+
+- Set of practices for building applications quickly and maintaining high quality
+
+Azure DevTest 
+
+- self service to provide VM and a lot of automation options
+
+
+
 ## Describe Azure management tools 
 
  describe the functionality and usage of the Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, and Azure Mobile App 

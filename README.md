@@ -1,6 +1,20 @@
 # AZ-900-fundamentals-notes
 > Microsoft Azure Fundamentals Certification
 
+# examtopics.com
+
+10 questions on exam topics a day
+
+| Questions             | Done? ✅ |
+| --------------------- | ------- |
+| 1 - 40                |         |
+| Page 1-8 ✅            |         |
+|                       |         |
+| Page 20 - 27 ✅        |         |
+| page 28 is restricted |         |
+
+# Table of contents
+
 [TOC]
 
 ## Change Log / Progress Track
@@ -11,16 +25,9 @@ https://marczak.io/az-900/episode-09/practice-test/
 
 | Topics | Done? | ---------------------------------------------------- |
 | ------ | ----- | ---------------------------------------------------- |
-| 1-17   | ✅     |                                                      |
+| 1-22   | ✅     |                                                      |
 |        |       |                                                      |
 |        |       |                                                      |
-
-10 questions on exam topics a day
-
-| Questions | Done? ✅ |
-| --------- | ------- |
-| 1-10      |         |
-|           |         |
 
 
 
@@ -58,13 +65,18 @@ fault tolerance
 
 ![laas, paas, saas responsibility and control](https://stackify.com/wp-content/uploads/2017/09/word-image-7-1024x550.png)
 
-- describe Infrastructure-as-a-Service (IaaS), 
-  - Compute
-    - VMs / Servers
-    - Azure virtual machines
-  - Storage
-  - Networking
-  - ... any kinds of servers
+### IaaS - Infrastructure-as-a-Service
+
+- Compute
+  - VMs / Servers
+  - Azure virtual machines
+- Storage accounts
+  - min 3 backup
+  - 2 PB for US Eu
+  - 500 TB for other regions
+  - no file limit
+- Networking
+- ... any kinds of servers
 
 
 
@@ -82,13 +94,12 @@ fault tolerance
 
 
 
-Types of service in Azure that are PaaS 
+### Types of service in Azure that are PaaS 
 
 - App service
   - Web App
   - Mobile App
   - Logic App
-    - 
 - Functions
 - Web Jobs
 - Azure SQL databases
@@ -142,18 +153,19 @@ storage is not limited ✅
 - describe the benefits and usage of **Availability Zones** 
   - Data Centers
 - describe the benefits and usage of Resource Groups 
-  - Resource Groups can represent logic grouping of *services*
+  - Resource Groups can represent logical grouping of *services*
     - by their life cycle
     - for billing and tracking purposes
     - by their resource type
     - by assigned departments
     - geographical location
   - It is not recommended for resource groups to be nested
-    - In fact, "there is no structure for a “nested” resource group in Azure
+    - In fact, "there is ❌**no structure for a “nested” resource group** in Azure
     - https://blog.turbonomic.com/microsoft-azure-resource-groups-introduction-best-practices
     - It is recommended to use Resource Groups, Subscriptions, and Management Groups
-  - A resource group can contain resources from different regions
-
+  - A resource group ✅ can contain resources from different regions
+  - A resource group can be in multiple resource groups 
+  
 - describe the benefits and usage of Subscriptions 
 - describe the benefits and usage of Management Groups 
 
@@ -203,6 +215,8 @@ Types of storage:
 
 
  describe the benefits and usage of Cosmos DB, Azure SQL Database, Azure Database for MySQL, Azure Database for PostgreSQL, and SQL Managed Instance 
+
+All are PaaS 
 
 
 
@@ -266,12 +280,16 @@ Types of storage:
     - Hadoop, 
     - Spark, 
     - HBase
-  - Flexible big data and analytics platform supporting multiple open-source analytics technologies
-  - 
+  - Flexible big data and analytics platform supporting multiple **open-source** analytics technologies
 
 
 
-- Azure Databricks 
+- Data Lake Analytics
+  - Parallel data transformation and processing programs - petabytes of data
+
+
+
+- Azure Databricks - SPARK 
   - PaaS offering - helps build data transformation solutions
   - based on **Apache Spark**
 
@@ -292,15 +310,18 @@ Types of storage:
 
 
 
-- Azure Machine Learning
-  - cloud based e2e machine learning modelling 
-  - **Workspace**
-    - Top-level Azure resource for management of Azure ML service
-    - consolidates all the features of Azure Machine learning from a management perspective
-  - **Studio**
-    - GUI-based IDE for constructing and operationalizing Machine Learning workflow on Azure
-  - **Designer**
-    - Drag-and-drop interface used to train and deploy models in Azure Machine Learning
+### Azure Machine Learning
+
+- cloud based e2e machine learning modelling 
+- **Workspace**
+  - Top-level Azure resource for management of Azure ML service
+  - consolidates all the features of Azure Machine learning from a management perspective
+- **Studio**
+  - GUI-based IDE for constructing and operationalizing Machine Learning workflow on Azure
+- **Designer**
+  - Drag-and-drop interface used to train and deploy models in Azure Machine Learning
+  - Connect datasets and modules on interactive canvas to create machine learning models 
+
 - 
 
 
@@ -339,6 +360,8 @@ DevOps
 Azure DevTest 
 
 - self service to provide VM and a lot of automation options
+- Start 50 VMs
+  - DevTest Labs
 
 
 
@@ -346,7 +369,52 @@ Azure DevTest
 
  describe the functionality and usage of the Azure Portal, Azure PowerShell, Azure CLI, Cloud Shell, and Azure Mobile App 
 
+### Azure PowerShell
+
+- MacOS 
+  - PowerShell Core 6.0 not enough ❌
+- PowerShell module is only for Windows OS
+- Chrome OS has Cloud Shell
+- can be installed everywhere
+
+### CLI
+
+- CLI can be installed everywhere
+
+### Cloud Shell
+
+- Web based
+
+
+
+```shell
+az vm create --resource-group RG1 --name VM1 --image UbuntuLTS
+--generate-ssh-keys
+
+```
+
+
+
+
+
  describe the functionality and usage of Azure Advisor 
+
+### Azure Advisor 
+
+- personalised consultant that provides recommendations
+  - ❌ not on network settings
+- in areas such as 
+  - cost
+  - performance
+  - reliability
+  - security
+  - operational excellence
+
+- Advisor is proactive
+  - ❌ not good with investigations regarding data breach
+- ❌cannot generate a list of VM "not" protected by backup 
+
+
 
  describe the functionality and usage of Azure Resource Manager (ARM) templates 
 
@@ -356,25 +424,46 @@ Azure DevTest
 
 **Service health** can see health of Azure services
 
+- ❌ cannot prevent a service failure
 
 
-Azure Monitor
+
+### Azure Monitor
 
 - can see multiple subscriptions 
 - Application Insights
   - ![Application Insights instrumentation in your app sends telemetry to your Application Insights resource.](https://docs.microsoft.com/en-us/azure/azure-monitor/app/media/app-insights-overview/diagram.png)
-  - 
+- can send an alert
 - ...
 
 
 
  describe the functionality and usage of Azure Service Health 
 
+
+
+### Microsoft Defender - formerly Azure Advanced Threat Protection
+
+- identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization
+
+
+
 # Describe general security and network security features (10-15%) 
 
 ## Describe Azure security features 
 
  describe basic features of Azure Security Center, including policy compliance, security alerts, secure score, and resource hygiene 
+
+
+
+### Security Center 
+
+- Provide just-in-time access control for network ports. Doing so reduces your attack surface by ensuring that the network only allows traffic that you require at the time that you need it to.
+- Can monitor Azure resources and on-premise resources
+- ❌ not all features are free
+- Can download compliance report
+
+
 
  describe the functionality and usage of Key Vault 
 
@@ -386,9 +475,46 @@ Azure Monitor
 
  describe the functionality and usage of Network Security Groups (NSG) 
 
+### Network Security Groups (NSG) 
+
+- 4 information
+  - source/target port
+  - source/dest address
+  - direction inbound/outbound
+  - protocol
+
+- Filter based on 
+  - TCP/UDP protocol
+  - Port number
+    - RDP etc.
+- <strong>Network Security Group</strong> is a service that allows customers to <strong>filter</strong> <strong>both</strong> <strong>inbound</strong> (incoming) and <strong>outbound</strong> (outgoing) traffic from and to resources that are located in the Azure Virtual Network.
+
+- ❌ Application security groups are not used to **filter traffic** based on the network protocol
+
+#### Association
+
+Assigned to ✅ 
+
+- Vnet Subnet
+- Network interface
+
+Cannot to ❌
+
+- Vnet
+
+
+
  describe the functionality and usage of Azure Firewall 
 
  describe the functionality and usage of Azure DDoS protection 
+
+### Azure DDoS protection
+
+- Standard
+  - has logging, alert, and telemetry
+- Basic
+
+
 
 # Describe identity, governance, privacy, and compliance features (20- 25%) 
 
@@ -409,6 +535,14 @@ Azure Monitor
 
 
  describe the functionality and usage of Azure Active Directory 
+
+### Azure Active Directory Identity Protection
+
+- manage the roll-out of Azure Multi-Factor Authentication (MFA) registration by configuring a Conditional Access policy to require MFA registration no matter what modern authentication app you are signing in to
+
+
+
+
 
  describe the functionality and usage of Conditional Access, Multi-Factor Authentication (MFA), and Single Sign-On (SSO) Describe Azure governance features 
 
@@ -433,6 +567,12 @@ you are able to create **READ + DELETE** locks on the same resource
  describe the functionality and usage of Azure Blueprints 
 
  describe the Cloud Adoption Framework for Azure Describe privacy and compliance resources 
+
+### Compliance Manager
+
+- 365 Admin Center
+
+
 
  describe the Microsoft core tenets of Security, Privacy, and Compliance 
 
@@ -474,9 +614,15 @@ Compliance
 
 ![The trophy for the Describe core Azure services learning path.](https://docs.microsoft.com/en-us/learn/achievements/az-900-describe-core-azure-services.svg)
 
+### CapEx OpEx
+
 CapEx - capital expenditure
 
 OpEx - operation expenditure
+
+### Public model
+
+- Azure, AWS, GCP
 
 
 
@@ -501,6 +647,23 @@ Subnets
 ![The trophy for the Describe core solutions and management tools on Azure learning path.](https://docs.microsoft.com/en-us/learn/achievements/azure-fundamentals-describe-core-solutions-and-management-tools-on-azure.svg)
 
 ![Decision tree for Azure compute services](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/images/compute-choices.png)
+
+
+
+## Site Recovery
+
+disaster recovery as a service
+
+DRaaS
+
+## Azure Backup
+
+- $0 cost
+  - built in backup cost
+  - no mgmt overhead
+- Retain data for 2 weeks
+
+
 
 # [Part 3: solutions and management tools on Azure](https://docs.microsoft.com/en-us/learn/paths/az-900-describe-core-solutions-management-tools-azure/)
 
